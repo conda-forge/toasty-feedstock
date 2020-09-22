@@ -18,7 +18,7 @@ build:
   entry_points:
     - toasty=toasty.cli:entrypoint
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true # [py<37]
+  skip: true  # [py<37]
 
 requirements:
   build:
