@@ -1,6 +1,5 @@
 # notes:
 # - python >= 3.7 required for datetime.fromisoformat
-# - can't conveniently test on Windows due to lack of healpy
 
 {% set name = "toasty" %}
 {% set version = "0.3.2" %}
@@ -39,11 +38,10 @@ requirements:
 test:
   imports:
     - toasty
-    - toasty.tests
   commands:
     - pip check
     - toasty --help
-    - pytest --pyargs toasty  # [not win]
+    - pytest --pyargs toasty
   requires:
     - astropy
     - healpy  # [not win]
