@@ -5,11 +5,9 @@ Home: https://toasty.readthedocs.io/
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/toasty-feedstock/blob/master/LICENSE.txt)
 
 Summary: Generate TOAST image tile pyramids from existing image data
-
-
 
 Current build status
 ====================

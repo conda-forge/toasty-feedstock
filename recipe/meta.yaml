@@ -2,7 +2,7 @@
 # - python >= 3.7 required for datetime.fromisoformat
 
 {% set name = "toasty" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/toasty-{{ version }}.tar.gz
-  sha256: 7dc880b5ece31eace5636fecd80634a3b44a1e329f8f7a6dd2bec05b896597a5
+  sha256: fefc2da0f8e2df8714344e39147d7bbfe8e323bb9a375b7457513cea7f89dec0
 
 build:
   number: 0
@@ -28,6 +28,7 @@ requirements:
     - pip
     - python
   run:
+    - filelock >=3
     - {{ pin_compatible('numpy') }}
     - pillow >=7.0
     - python
