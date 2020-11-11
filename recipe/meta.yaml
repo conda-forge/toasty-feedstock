@@ -13,7 +13,7 @@ source:
   sha256: fefc2da0f8e2df8714344e39147d7bbfe8e323bb9a375b7457513cea7f89dec0
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - toasty=toasty.cli:entrypoint
   script: {{ PYTHON }} -m pip install . -vv
