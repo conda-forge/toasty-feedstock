@@ -1,8 +1,13 @@
 # notes:
 # - python >= 3.7 required for datetime.fromisoformat
+# - we have chosen to make the following dependencies optional:
+#   - astropy
+#   - requests
+# - the conda-forge deps analyzer reports cython as missing, but it's appropriately
+#   marked as build-time-only
 
 {% set name = "toasty" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +15,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/toasty-{{ version }}.tar.gz
-  sha256: 5a88fcf30f7886ca77a26cf2e154c93d407c1e4e7aaaa9470cc6145d3830cf00
+  sha256: 6522cbcb18c1f938fa9fea77fb91bd998a1754d7e72a94ba2dd108f4f77c8138
 
 build:
   number: 0
@@ -34,7 +39,7 @@ requirements:
     - python
     - pyyaml >=5.0
     - tqdm >=4.0
-    - wwt_data_formats >=0.2.0
+    - wwt_data_formats >=0.7.0
 
 test:
   imports:
