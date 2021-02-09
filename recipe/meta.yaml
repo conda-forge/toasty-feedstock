@@ -7,7 +7,7 @@
 #   marked as build-time-only
 
 {% set name = "toasty" %}
-{% set version = "0.6.3" %}
+{% set version = "0.6.4" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/toasty-{{ version }}.tar.gz
-  sha256: 81a7af1249c8d4580dfda186a6135f5d0e7821bb16802d9c97e51cdfdba3223c
+  sha256: b998f01979a76f7b22356ea9e2bcc5ee855ecdc572261a912b6cb7677c582ce2
 
 build:
   number: 0
@@ -39,7 +39,7 @@ requirements:
     - python
     - pyyaml >=5.0
     - tqdm >=4.0
-    - wwt_data_formats >=0.7.0
+    - wwt_data_formats >=0.9.1
 
 test:
   imports:
