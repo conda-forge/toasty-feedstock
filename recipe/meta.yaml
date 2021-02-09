@@ -39,7 +39,7 @@ requirements:
     - python
     - pyyaml >=5.0
     - tqdm >=4.0
-    - wwt_data_formats >=0.7.0
+    - wwt_data_formats >=0.9.1
 
 test:
   imports:
