@@ -7,7 +7,7 @@
 #   marked as build-time-only
 
 {% set name = "toasty" %}
-{% set version = "0.11.0" %}
+{% set version = "0.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/toasty-{{ version }}.tar.gz
-  sha256: 3225845493915b91ecb5215fae2a097f34b35a72503a9041421e5366c09ab0da
+  sha256: 1ba07006b1428aa6df4c88788c262c0143d699a704387ff0713cca00f03b6f5f
 
 build:
   number: 0
