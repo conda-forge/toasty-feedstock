@@ -38,6 +38,8 @@ requirements:
     - pillow >=7.0
     - python
     - pyyaml >=5.0
+    - reproject >=0.8
+    - shapely
     - tqdm >=4.0
     - wwt_data_formats >=0.9.1
 
