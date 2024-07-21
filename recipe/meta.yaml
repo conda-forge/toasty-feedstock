@@ -7,7 +7,7 @@
 #   marked as build-time-only
 
 {% set name = "toasty" %}
-{% set version = "0.19.0" %}
+{% set version = "0.19.1" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/toasty-{{ version }}.tar.gz
-  sha256: 7948ab06a5858822b4cd82405b1f16cf30354c486c13240550d5d5931d44dafc
+  sha256: 3953f0d0b37aded8288651d1a950fc6f1523a31b99f4a98dc9b84e987e4ea930
 
 build:
   number: 0
@@ -27,6 +27,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - python                              # [build_platform != target_platform]
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - cython                              # [build_platform != target_platform]
