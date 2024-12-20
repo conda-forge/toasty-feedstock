@@ -18,7 +18,7 @@ source:
   sha256: 3953f0d0b37aded8288651d1a950fc6f1523a31b99f4a98dc9b84e987e4ea930
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - toasty=toasty.cli:entrypoint
   script: {{ PYTHON }} -m pip install . -vv
@@ -55,7 +55,7 @@ test:
     - toasty --help
     - pytest --pyargs toasty
   requires:
-    - astropy
+    - astropy-base
     - healpy  # [not win]
     - openexr-python
     - pip
