@@ -36,6 +36,7 @@ requirements:
     - cython
     - numpy
     - pip
+    - setuptools
     - python
   run:
     - filelock >=3
