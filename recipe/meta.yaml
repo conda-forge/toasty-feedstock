@@ -14,7 +14,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/toasty-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/toasty-{{ version }}.tar.gz
   sha256: 3953f0d0b37aded8288651d1a950fc6f1523a31b99f4a98dc9b84e987e4ea930
 
 build:
@@ -36,6 +36,7 @@ requirements:
     - cython
     - numpy
     - pip
+    - setuptools
     - python
   run:
     - filelock >=3
