@@ -7,7 +7,7 @@
 #   marked as build-time-only
 
 {% set name = "toasty" %}
-{% set version = "0.19.1" %}
+{% set version = "0.20.0" %}
 
 package:
   name: {{ name|lower }}
@@ -15,18 +15,18 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/toasty-{{ version }}.tar.gz
-  sha256: 3953f0d0b37aded8288651d1a950fc6f1523a31b99f4a98dc9b84e987e4ea930
+  sha256: 9835eb5a777dffd3b66550d9b30e2b4747e9cb285ed69d52ffef2aae60bb06be
 
 build:
-  number: 2
+  number: 0
   entry_points:
     - toasty=toasty.cli:entrypoint
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   skip: true  # [py<37]
 
 requirements:
   build:
-    - {{ compiler('c') }}
+    - {{ compiler("c") }}
     - {{ stdlib("c") }}
     - python                              # [build_platform != target_platform]
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
